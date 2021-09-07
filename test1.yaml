@@ -1,0 +1,12 @@
+---
+- hosts: kvm
+  gather_facts: True
+  become: True
+  user: root
+  vars_prompt:
+    - name: username
+      prompt: Enter your RHN Red Hat username for system registration
+      private: no
+
+    - name: password
+      prompt: Enter your RHN Red Hat password for system registration
